@@ -1,0 +1,72 @@
+A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill's lunch for $10. Then later Chris gave Alice $5 for a taxi ride. 
+We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are 
+the person's ID), the transactions can be represented as [[0, 1, 10], [2, 0, 5]].
+Given a list of transactions between a group of people, return the minimum number of transactions required to settle the debt.
+Note:
+A transaction will be given as a tuple (x, y, z). Note that x ≠ y and z > 0.
+Person's IDs may not be linear, e.g. we could have the persons 0, 1, 2 or we could also have the persons 0, 2, 6.
+
+Input Description:
+First line contains,  N the size of the rows. (1<N<100).
+Rest line contains, N lines of rows with 3 integers as input in each line.
+
+Output Description:
+Print the minimum number of transactions required to settle the debt.
+
+Sample Input:
+2
+0 1 10
+2 0 5
+
+Sample Output:
+2
+
+Explanation:
+Two transactions are needed. One way to settle the debt is person #1 pays person #0 and #2 $5 each.
+
+Sample Input:
+3
+1 1 3
+2 0 4
+4 3 6
+
+Sample Output:
+2
+
+Sample Input:
+3
+2 0 3
+1 2 1
+5 4 8
+
+Sample Output:
+3
+
+Sample Input:
+2
+0 1 1
+0 0 0
+
+Sample Output:
+1
+
+Sample Input:
+4
+2 0 9
+1 1 3
+7 3 6
+9 6 12
+
+Sample Output:
+3
+
+Sample input:
+5
+5 2 20
+1 3 18
+8 1 17
+8 4 22
+9 5 23
+
+Sample Output:
+5
